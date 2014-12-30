@@ -60,6 +60,10 @@ public class Main
 		// specified HTTP response code.
 		// Supports GET, PUT, POST, DELETE methods.
 		server.uri("/status/{delay_ms}/{http_response_code}.{format}", config.getStatusController());
+
+        // Waits the delay_ms number of milliseconds and responds with a 200.
+        // Supports GET, PUT, POST, DELETE methods.
+        server.uri("/bodyecho", config.getBodyEchoController());
     }
 
 	/**

@@ -24,6 +24,7 @@ import org.restexpress.util.Environment;
 import com.echo.controller.EchoController;
 import com.echo.controller.StatusController;
 import com.echo.controller.SuccessController;
+import com.echo.controller.BodyEchoController;
 
 /**
  * @author toddf
@@ -50,8 +51,10 @@ extends Environment
 	private EchoController echoController = new EchoController();
 	private SuccessController successController = new SuccessController();
 	private StatusController statusController = new StatusController();
+    private BodyEchoController bodyEchoController = new BodyEchoController();
 
-	@Override
+
+    @Override
 	protected void fillValues(Properties p)
 	{
 		this.name = p.getProperty(NAME_PROPERTY, RestExpress.DEFAULT_NAME);
@@ -99,5 +102,10 @@ extends Environment
 	public StatusController getStatusController()
     {
     	return statusController;
+    }
+
+    public BodyEchoController getBodyEchoController()
+    {
+        return bodyEchoController;
     }
 }
