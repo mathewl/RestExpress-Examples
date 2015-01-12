@@ -10,7 +10,7 @@ Echo
 
 This URL simply sends back the same string that is sent in on the 'echo' query-string parameter. There is no serialization involved in the response. The body is not parsed.
 
-URL: localhost:9000/echo/{delay_ms}
+URL: /echo/{delay_ms}
 Methods: GET, PUT, POST, DELETE
 
 Success
@@ -59,11 +59,3 @@ Content-Length: 67
 
 {"errorId":"4d067a25-6004-4ba5-8e94-73fd6ab53bb4","httpStatus":404}
 ```
-
-Body Echo
-=========
-
-This URL simply sends back the same contents that are body. 
-
-URL: localhost:9000/bodyecho/{delay_ms}
-Methods: GET, PUT, POST, DELETE
